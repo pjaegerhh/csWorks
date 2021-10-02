@@ -8,7 +8,7 @@
     (process.env.MONGO_PORT || '27017') +
     '/csWorks'
 }
-*/  LOKAL
+LOKAL */  
 const config = {
   env: process.env.NODE_ENV || 'development',
   port: process.env.PORT || 3000,
