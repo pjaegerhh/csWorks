@@ -1,7 +1,5 @@
 const path = require('path')
 
-//import path from 'path'
-
 const CURRENT_WORKING_DIR = process.cwd()
 
 const config = {
@@ -13,6 +11,7 @@ const config = {
         path: path.join(CURRENT_WORKING_DIR , '/dist'),
         filename: 'bundle.js',
         publicPath: "/dist/"
+        assetModuleFilename: 'images/[name][ext]',
     },
     module: {
         rules: [
@@ -22,7 +21,7 @@ const config = {
                 use: [
                     'babel-loader'
                 ]
-            },           
+            },
             {
                 test: /\.m?js/,
                 resolve: {
@@ -30,12 +29,36 @@ const config = {
                 }
             },
             {
-                test: /\.(ttf|eot|svg|gif|jpg|png)(\?[\s\S]+)?$/,
-                use: 'file-loader'
-            }
+                test: /\.svg/,
+                type: 'asset/resource'
+              },{
+                test: /\.css/,
+                type: 'asset/resource'
+              },
+              {
+                test: /\.png/,
+                type: 'asset/resource'
+              },
+              {
+                test: /\.(ssvg|pong|jpg|jpeg|gif)$/i,
+                type: 'asset/resource'
+              }
+
         ]
+    },  
+    plugins: [
+          new webpack.HotModuleReplacementPlugin(),
+          new webpack.NoEmitOnErrorsPlugin(),
+          new webpack.ProvidePlugin({"React": "react", }),  // ggfls muss das auch in die deployment variante 
+    ],
+    
+    resolve: {
+        alias: {
+          'react-dom': '@hot-loader/react-dom'
+        }
     }
 }
+
 
 //export default config
 module.exports = config
