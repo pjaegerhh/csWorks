@@ -19,6 +19,8 @@
   },
   "scripts": {
     "development": "nodemon"
+    "build": "webpack --config webpack.config.client.production.js && webpack --mode=production --config webpack.config.server.js",
+    "start": "node ./dist/server.generated.js"
   },
   "dependencies": {
     "@emotion/cache": "^11.4.0",
