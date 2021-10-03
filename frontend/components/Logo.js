@@ -1,6 +1,6 @@
 import { experimentalStyled } from '@material-ui/core/styles';
 
-const LogoRoot = experimentalStyled('svg');
+const LogoRoot = experimentalStyled('svg')``;
 
 const Logo = (props) => (
   <LogoRoot
@@ -10,7 +10,7 @@ const Logo = (props) => (
     width="52"
     {...props}
   >
-    <title>MKP</title>
+    <title>CompuSys</title>
     <defs>
       <filter id="filter">
         <feColorMatrix

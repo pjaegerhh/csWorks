@@ -4,5 +4,5 @@
         ".vscode{,/**}"
     ],
     "appService.deploySubpath": ".",
-    "appService.defaultWebAppToDeploy": "/subscriptions/c2bfb428-7321-4bd2-8d85-2b374687553f/resourceGroups/rg_csWorks/providers/Microsoft.Web/sites/csWorks002"
+    "appService.defaultWebAppToDeploy": "/subscriptions/c2bfb428-7321-4bd2-8d85-2b374687553f/resourceGroups/rg_csworks_web/providers/Microsoft.Web/sites/csworks"
 }

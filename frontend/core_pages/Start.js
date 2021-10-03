@@ -1,15 +1,15 @@
-import { useEffect } from 'react'
-import { Helmet } from 'react-helmet-async'
+//import { useEffect } from 'react'
+import { Helmet }     from 'react-helmet-async';
+import { StartHero }  from '../components/Start';
 
-import StartHero from '../components/Start/StartHero'
-
-import gtm from '../lib/gtm';
+//import gtm from '../lib/gtm';
 
 const Start = () => {
-  useEffect(() => {
+
+/*  useEffect(() => {
     gtm.push({ event: 'page_view' });
   }, []);
-
+*/
   return (
     <>
       <Helmet>

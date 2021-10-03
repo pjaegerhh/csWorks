@@ -53,7 +53,7 @@ const SettingsDrawer = () => {
 
   return (
     <>
-      <Tooltip title="Settings">
+      <Tooltip title="Einstellungen">
         <Fab
           color="primary"
           onClick={handleOpen}
@@ -239,7 +239,7 @@ const SettingsDrawer = () => {
             onClick={handleSave}
             variant="contained"
           >
-            Save Settings
+            Einstellungen speichern
           </Button>
         </Box>
       </Drawer>

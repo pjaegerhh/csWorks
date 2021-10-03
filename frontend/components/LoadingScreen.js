@@ -17,7 +17,7 @@ const LoadingScreen = () => {
         backgroundColor: 'background.paper',
         minHeight: '100%'
       }}
-    ></Box>
+    />
   );
 };
 
