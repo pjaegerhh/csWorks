@@ -1,7 +1,7 @@
 {
   "name": "csWorks",
   "version": "1.0.0",
-  "description": "Modernes Warenwirtschaftssystem in der Cloud",
+  "description": "Modernes Warenwirtschaftssystem in der Cloud 2021",
   "main": "./backend/server.js",
   "author": "CompuSys - Peter Jaeger",
   "license": "MIT",
