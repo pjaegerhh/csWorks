@@ -1,23 +1,29 @@
 import {
-    Box,
-    Container,
-    Divider,
-    Grid,
-    Link,
-    List,
-    ListItem,
-    ListItemAvatar,
-    ListItemText,
-    Typography
-  } from '@material-ui/core';
+    Box, Container, Divider, Grid, 
+    Link, List, ListItem, 
+    ListItemAvatar, ListItemText,
+    Typography }                  from '@material-ui/core';
 
-  import { alpha } from '@material-ui/core/styles';
-  import MinusIcon from '../assets/icons/Minus';
-  import Logo from './Logo';
-  
+  import { alpha }                from '@material-ui/core/styles';
+  import MinusIcon                from '../assets/icons/Minus';
+  import Logo                     from './Logo';
+
+  import { Link as RouterLink }   from 'react-router-dom';
+
+/*
+  <Button
+  color="primary"
+  component={RouterLink}
+  size="large"
+  to="/coreapp"
+  variant="contained"
+>
+  Browse Components
+</Button>
+*/
   const sections = [
     {
-      title: 'Menu',
+      title: 'Produkte',
       links: [
         {
           title: 'Übersicht',
@@ -25,7 +31,7 @@ import {
         },
         {
           title: 'Warenwirtschaft',
-          href: '/docs'
+          href: '/coreapp'
         },
         {
           title: 'Buchhaltung',
@@ -38,18 +44,18 @@ import {
       ]
     },
     {
-      title: 'Placeholders',
+      title: 'Rechtliches',
       links: [
         {
-          title: 'Terms & Conditions',
+          title: 'AGBs',
           href: '#'
         },
         {
-          title: 'License',
+          title: 'Lizenzbedingungen',
           href: '#'
         },
         {
-          title: 'Contact',
+          title: 'Kontakt',
           href: '#'
         }
       ]
@@ -64,10 +70,6 @@ import {
         {
             title: 'eMail',
             href: 'mailto://info@compusys.cc'
-        },
-        {
-          title: 'Instagram',
-          href: '#'
         },
         {
           title: 'LinkedIn',
@@ -157,17 +159,33 @@ import {
                     >
                       <MinusIcon color="primary" />
                     </ListItemAvatar>
-                    <ListItemText
-                      primary={(
-                        <Link
-                          href={link.href}
-                          color="textPrimary"
-                          variant="subtitle2"
-                        >
-                          {link.title}
-                        </Link>
-                      )}
-                    />
+
+                    {link.href.charAt(0)=='/' ? 
+                        <ListItemText 
+                          primary={(  
+                              <Link      
+                                component={RouterLink}
+                                to={link.href}
+                                color="textPrimary"
+                                variant="subtitle2"
+                              >
+                                {link.title}
+                              </Link>
+                            )}
+                        /> 
+                        : 
+                        <ListItemText 
+                          primary={(  
+                              <Link      
+                                href={link.href}
+                                color="textPrimary"
+                                variant="subtitle2"
+                              >
+                                {link.title}
+                              </Link>
+                            )}
+                          /> 
+                    }
                   </ListItem>
                 ))}
               </List>

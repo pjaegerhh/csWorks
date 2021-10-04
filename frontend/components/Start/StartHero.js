@@ -68,7 +68,7 @@ return (
         color="primary"
         component={RouterLink}
         size="large"
-        to="/browse"
+        to="/coreapp"
         variant="contained"
       >
         Browse Components

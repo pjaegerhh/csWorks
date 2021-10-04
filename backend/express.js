@@ -7,7 +7,7 @@ import userRoutes from './routes/user_routes'
 import authRoutes from './routes/auth_routes'
 
 import Template from './../template'
-// import devBundle from './devBundle' // only for dev
+ import devBundle from './devBundle' // only for dev
 
 import path from 'path'
 
@@ -18,7 +18,7 @@ import path from 'path'
 const CURRENT_WORKING_DIR = process.cwd()
 const app = express()
 
-// devBundle.compile(app) //only for dev
+ devBundle.compile(app) //only for dev
 
 
 app.use(express.urlencoded({extended: true}));
