@@ -1,18 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState }          from 'react';
 import {
-  Box,
-  Button,
-  Drawer,
-  Fab,
-  FormControlLabel,
-  Switch,
-  TextField,
-  Tooltip,
-  Typography
-} from '@material-ui/core';
-import { THEMES } from '../../config/constants';
-import useSettings from '../hooks/useSettings';
-import AdjustmentsIcon from '../assets/icons/Adjustments';
+  Box, Button, Drawer, Fab, 
+  FormControlLabel, Switch, TextField, 
+  Tooltip, Typography }                 from '@material-ui/core';
+import { THEMES }                       from '../../config/constants';
+import useSettings                      from '../hooks/useSettings';
+import AdjustmentsIcon                  from '../assets/icons/Adjustments';
 
 const getValues = (settings) => ({
   compact: settings.compact,

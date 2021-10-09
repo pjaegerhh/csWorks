@@ -44,14 +44,14 @@ return (
         color="primary"
         variant="overline"
       >
-        Introducing
+        Willkommen !
       </Typography>
       <Typography
         align="center"
         color="textPrimary"
         variant="h3"
       >
-        Material Kit Pro v4
+        csWorks Warenwirtschaft
       </Typography>
       <Typography
         align="center"
@@ -59,10 +59,8 @@ return (
         variant="body1"
         sx={{ py: 3 }}
       >
-        A professional kit that comes with ready-to-use Material-UI©
-        components
-        developed with one common goal in mind, help
-        you build faster &amp; beautiful applications BLUBB BLUBB.
+        Eine professionelle Warenwirtschaft die 100% Cloud basiert ist
+        Natürlich in der EU gehosted.
       </Typography>
       <Button
         color="primary"
@@ -71,7 +69,7 @@ return (
         to="/coreapp"
         variant="contained"
       >
-        Browse Components
+        csWorks
       </Button>
       <Box
         sx={{
@@ -97,9 +95,9 @@ return (
           color="textSecondary"
           variant="caption"
         >
-          Available For:
+          Verfügbar für:
         </Typography>
-        {['JavaScript', 'TypeScript', 'Figma', 'Sketch'].map((item) => (
+        {['PC', 'MACs', 'iPad', 'Mobiles'].map((item) => (
           <Box
             key={item}
             sx={{
